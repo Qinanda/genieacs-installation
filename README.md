@@ -6,17 +6,17 @@ sudo su
 git clone https://github.com/qinanda/genieacs-installation
 ```
 ```
-cd GACS-Ubuntu-22.04
+cd genieacs-installation
 ```
 ```
-chmod +x GACS-Jammy.sh
+chmod +x install.sh
 ```
 ```
 sudo apt-get install dos2unix
 ```
 ```
-dos2unix GACS-Jammy.sh
+dos2unix install.sh
 ```
 ```
-bash GACS-Jammy.sh
+bash install.sh
 ```
