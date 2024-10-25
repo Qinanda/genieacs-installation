@@ -3,7 +3,7 @@
 sudo su
 ```
 ```
-git clone https://github.com/safrinnetwork/GACS-Ubuntu-22.04
+git clone https://github.com/qinanda/genieacs-installation
 ```
 ```
 cd GACS-Ubuntu-22.04
