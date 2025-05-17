@@ -1,0 +1,32 @@
+Install GENIEACS in ARMBIAN 
+
+
+git clone https://github.com/qinanda/genieacs-installation
+
+Uncomment bagian install SSL dan Mongo DB di script 
+
+# download binary openssl packages from Impish builds
+wget http://ports.ubuntu.com/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2_arm64.deb
+wget http://ports.ubuntu.com/pool/main/o/openssl/libssl-dev_1.1.1f-1ubuntu2_arm64.deb
+wget http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_arm64.deb
+
+
+# install downloaded binary packages 
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_arm64.deb  ( yang ini saja )
+sudo dpkg -i libssl-dev_1.1.1f-1ubuntu2_arm64.deb
+sudo dpkg -i openssl_1.1.1f-1ubuntu2_arm64.deb
+
+# Install Mongo DB 
+apt-get install mongodb-org=4.4.8 mongodb-org-server=4.4.8 mongodb-org-shell=4.4.8 mongodb-org-mongos=4.4.8 mongodb-org-tools=4.4.8
+
+#Cek status mongodb
+systemctl status mongod
+
+# Enable Mongodb
+ systemctl enable mongod
+
+# Start Mongodb
+ systemctl start mongod
+
+
+Run Script genieacs yang sudah diedit untuk Lib struktur arm64
